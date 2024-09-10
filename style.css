@@ -1,0 +1,587 @@
+* {
+    margin: 0;
+    padding: 0; 
+    font-family: Inter, Okra, Helvetica, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: relative; /* Change to relative if you want the header to be part of the normal flow */
+    color: #fff;
+    width: 100%;
+    height: 60vh; /* Specify height */
+    background-image: url('images/zomatohero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 20px; /* Add padding if necessary to ensure content fits */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Distribute space between left and right nav sections */
+    max-width:1100px; /* Adjusted to1100px */
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+ul.nav-left,
+ul.nav-right {
+    margin-top: 20px;
+    display: flex;
+    list-style: none;
+    font-size: 15px; /* Set font size to 15px for better readability */
+    font-weight: 400;
+    align-items: center; /* Vertically center the items */
+    max-width:1100px; /* Ensure alignment within1100px width */
+}
+
+ul.nav-right {
+    justify-content: flex-end;
+}
+
+ul.nav-left li.get-the-app,
+ul.nav-right li {
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+ul.nav-left li.get-the-app {
+    margin-right: auto; /* Push the "Get the App" link to the left */
+}
+
+select {
+    border: none; /* Remove border from the select element */
+    border-radius: 50px; /* Optional: keep or remove border-radius based on design preference */
+    width: auto; /* Let the width adjust to the content */
+    font-size: 16px; /* Ensure text is 15px for consistency */
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+option {
+    font-size: 13px; /* Ensure text in options is 15px */
+    color: black;
+    padding: 10px 15px;
+    line-height: 20px;
+}
+
+.get-the-app {
+    text-decoration: none;
+    font-size: 16px; /* Set text size to 15px for consistency */
+    font-weight: 100;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+svg {
+    width: 16px; /* Adjust SVG size if necessary to match text size */
+}
+
+.header-contant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 70vh;
+    height: 90%;
+    max-width:1100px; /* Ensure alignment within1100px width */
+    margin: 0 auto;
+}
+
+.zomato-png {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.zomato-tag {
+    font-weight: 50;
+    margin-bottom: 20px;
+}
+
+.location {
+    display: flex;
+    max-width:1100px; /* Ensure alignment within1100px width */
+    margin: 0 auto;
+}
+
+.location-logo {
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+}
+
+.location-info {
+    background: #fff;
+    color: grey;
+    height: 42px;
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+    width: 400px;
+    border: none;
+    font-size: 16px;
+    margin: 0; 
+    border-radius: 0 5px 5px 0;
+    outline: none;
+}
+
+.location-detection {
+    background: #fff;
+    color: grey;
+    height: 42px;
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+    width: 200px;
+    border: none;
+    margin: 0;
+}
+
+select.location-detection .location-option {
+    color: black; /* Text color */
+    background-color: white; /* Background color */
+    padding: 5px; /* Padding inside option (might not work) */
+    font-size: 16px; /* Font size */
+    border-radius: 0;
+}
+
+select.location-detection .location-option:hover {
+    background-color: #FF7E8B;
+    color: white;
+}
+
+.magnifying-glass {
+    background: #fff;
+    color: grey;
+    padding-top: 1px;
+    padding-right: 25px;
+    font-size: 25px;
+    height: 42px;
+    padding-left: 24px;
+    font-weight: 100;
+}
+
+.line {
+    color: rgb(196, 186, 186);
+    font-size: 20px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Align items to start */
+    max-width:1100px; /* Ensure alignment within1100px width */
+    margin: 20px auto;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+
+.card-item {
+    max-height: 300px;
+    margin: 20px 18px 0 0;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2); /* Optional: Add shadow for better visibility */
+    border-radius: 10px;
+    background-color: #fff;
+    line-height: 25px;
+    transition: 0.5s;
+    font-weight: 200;
+}
+
+.img-card {
+    width: 530px;
+    height: 150px; /* Make the image container full height */
+    border-radius: 10px 10px 0px 0px; 
+    object-fit: cover;
+}
+
+.card-h {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.card-p {
+    padding-left: 10px;
+}
+
+.card-item:hover {
+    transform: scale(1.05); /* Scales the card to 105% of its size */
+}
+
+#colection-section {
+    padding: 20px;
+    
+ 
+}
+
+.collection {
+    max-width:1100px; /* Ensure alignment within1100px width */
+    display: flex;
+    flex-direction: column;
+    justify-content: start; /* Align items to start */
+    margin: 40px auto ;
+}
+
+.collection.heading {
+    text-align: start;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+.collection-info {
+    display: flex;
+    justify-content: start; /* Align items to start */
+    align-items: center;
+    gap: 10px;
+}
+.collection-h{
+    font-weight: 400;
+    
+}
+
+.collection-info p{
+    font-weight: 200;
+}
+.collection-info a {
+    margin: 0;
+    font-weight: 400;
+    
+}
+
+.collection-info a {
+    margin-left: 200px;
+    text-decoration: none;
+    color: #FF7E8B;
+    display: flex;
+    align-items: center;
+}
+
+.collection-images 
+{   
+    display: flex;
+    justify-content: start; /* Align items to start */
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+
+.collection-item {
+    display: flex;
+    justify-content: start; /* Align items to start */
+    position: relative;
+    flex: 1;
+    max-width: 200px;
+    text-align: start;
+    overflow: hidden;
+    
+    
+}
+
+.collection-item img {
+    height: 250px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+
+.collection-text {
+     position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    color: white;
+    padding-left: 10px;
+
+}
+
+.collection-text h6{
+    font-size: 20px;
+    font-weight: 300;
+  
+  
+}
+.collection-text p {
+    margin: 0;
+    font-weight: 300;
+    
+}
+#popular-card {
+    padding: 0px;
+     
+    max-width: 1100px;
+    margin: 80px auto 0 auto;
+}
+
+.popular{
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.popular h1 {
+    font-weight: 400;
+    color: #333;
+    text-align: start;
+    margin-bottom: 20px;
+}
+.location-flex{
+     display: flex;
+     flex-wrap: wrap;  
+     justify-content: start; 
+}
+.location-cards {
+    
+    
+    background-color: #fff;
+    text-align: start;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin: 10px 20px 10px 0;
+    padding: 20px 0;
+
+    overflow: hidden;
+    width: 345px;
+    
+}
+
+.location-cards:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.location-cards-h2 {
+    font-weight: 400;
+    
+    color: #333;
+    margin: 0;
+    padding-bottom: 10px;
+    
+}
+
+.location-cards-p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.container-5 {
+    display: flex;
+    max-width: 1100px;
+    margin: 80px auto 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.zomato-mobile-section {
+    background-color: rgb(255, 251, 247);
+}
+
+.zomato-mobile {
+    width: 500px;
+}
+
+.zomato-mobile-heading {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 20px; /* Increase margin below heading */
+}
+
+.zomato-mobile-para {
+    font-size: 14px;
+    font-weight: 200;
+    color: #666;
+    margin-bottom: 20px; /* Increase margin below paragraph */
+}
+
+.zomato-description {
+    line-height: 1.5; /* Decrease line height */
+    padding-bottom: 90px;
+    margin-bottom: 20px; /* Increase margin below description div */
+}
+
+.radio-buttons {
+    margin-bottom: 20px;
+}
+
+.zomato-select {
+    margin-right: 10px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap between the input and button */
+    margin-bottom: 20px;
+}
+
+.zomato-info {
+    padding: 1.3rem 1.2rem;
+    height: 2.8rem;
+    background: rgb(255, 255, 255);
+    border: 0.1rem solid rgb(207, 207, 207);
+    font-size: 18px;
+    width: 250px;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 0.6rem;
+    color: rgb(28, 28, 28);
+}
+
+.share-link {
+    width: 115px;
+    height: 40px;
+    border-radius: 5px;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    background: rgb(239, 79, 95);
+    border: none;
+    transition: transform 0.25s, opacity 0.25s, box-shadow 0.25s;
+    outline: none !important;
+    cursor: pointer ;
+}
+.download-button{
+    width: 120px;
+    padding-right: 20px;
+}
+
+/* ----------------------------accordian--------------------------- */
+.accordian-section {
+    background: rgb(252, 252, 252);
+}
+.containers {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.containers h1 {
+    font-size: 24px;
+    font-weight: 300;
+    padding: 44px 0;
+}
+.accordian-wrapper {
+    align-content: start;
+}
+.accordian {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.containers .accordian.active .accordian-heading i {
+    transform: rotate(180deg);
+    
+}
+.containers .accordian.active .accordian-heading{
+    border-bottom:0 ;
+}
+.containers .accordian.active .accordian-content {
+    display: block;
+}
+.accordian-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    -webkit-box-align: center;
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 5px;
+    padding: 20px 25px;
+ 
+}
+.accordian-heading h3 {
+    font-weight: 400;
+}
+.accordian-content {
+    padding: 15px 20px;
+    border-right: 1px solid rgb(232, 232, 232);
+    border-left: 1px solid rgb(232, 232, 232);
+    border-bottom: 1px solid rgb(232, 232, 232);
+    font-size: 20px;
+    background: #fff;
+    border-top: 0;
+    display: none;
+    font-weight: 200;
+    border-top:0;
+}
+
+/* Footer */
+
+.footer-section{
+    background: rgb(248, 248, 248);
+}
+
+
+.footer { 
+    padding:40px 0px  ;
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+.footer-logo{
+    display: flex;
+    margin: 40px 0;
+    justify-content: space-between;
+}
+.footer img { 
+  width: 150px;
+  cursor: pointer;
+  
+}
+ 
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer .row {display: flex;
+    align-items: flex-start;
+    padding: 50px 0;
+}
+
+.footer .language-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+    color: #fff;
+    font-size: 15px;    
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.footer .language-btn img {
+    width: 10px;
+    margin-left: 10px;
+}
+.footer-select{
+    color: #666;
+    border: 1px solid #666;
+    padding:10px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+.col-button{
+    margin-bottom: 10px;
+}
+.para-footer{
+    padding-top: 30px;
+   font-weight: 200;
+   color: #666;
+   border-top: 0.1rem solid rgb(207, 207, 207);
+}
